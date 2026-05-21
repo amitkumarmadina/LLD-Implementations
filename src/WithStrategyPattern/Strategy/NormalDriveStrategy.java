@@ -1,3 +1,4 @@
+
 package WithStrategyPattern.Strategy;
 
 public class NormalDriveStrategy implements DriveStrategy{
