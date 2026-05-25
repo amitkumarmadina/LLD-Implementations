@@ -1,4 +1,4 @@
-package L10_Tik_Tak_Toe.src;
+package src;
 
 public class Main {
     public static void main(String[] args) {
