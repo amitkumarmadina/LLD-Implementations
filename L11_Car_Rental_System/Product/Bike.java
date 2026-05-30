@@ -1,5 +1,5 @@
 package L11_Car_Rental_System.Product;
 
-public class Bike {
+public class Bike extends Vehicle{
     
 }
