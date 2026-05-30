@@ -1,7 +1,7 @@
-package L11_Car_Rental_System;
+package L12_Car_Rental_System;
 import java.util.*;
 
-import L11_Car_Rental_System.Product.*;
+import L12_Car_Rental_System.Product.*;
 
 public class Store {
     int storeId;
