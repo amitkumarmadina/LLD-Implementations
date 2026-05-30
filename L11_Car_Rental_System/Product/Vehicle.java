@@ -5,17 +5,17 @@ import java.util.*;
 public abstract class Vehicle {
 int vehicleId;
 int vehicleNumber;
-VehicleType  vehicleType;
+VehicleType vehicleType;
 String companyName;
 String modelName;
 int kmDriven;
-Date menufacturingDate;
+Date manufacturingDate;
 int average;
 int cc;
 int dailyRentalCost;
 int hourlyRentalCost;
-int noOfSeates;
-Status status;
+int noOfSeats;
+Status status = Status.AVAILABLE;
 
 public int getVehicleId(){
     return vehicleId;
@@ -37,6 +37,32 @@ public VehicleType getVehicleType(){
     return vehicleType;
 }
 
+public void setVehicleType(VehicleType vehicleType){
+    this.vehicleType = vehicleType;
+}
 
+public int getDailyRentalCost(){
+    return dailyRentalCost;
+}
+
+public void setDailyRentalCost(int dailyRentalCost){
+    this.dailyRentalCost = dailyRentalCost;
+}
+
+public int getHourlyRentalCost(){
+    return hourlyRentalCost;
+}
+
+public void setHourlyRentalCost(int hourlyRentalCost){
+    this.hourlyRentalCost = hourlyRentalCost;
+}
+
+public Status getStatus(){
+    return status;
+}
+
+public void setStatus(Status status){
+    this.status = status;
+}
 
 }

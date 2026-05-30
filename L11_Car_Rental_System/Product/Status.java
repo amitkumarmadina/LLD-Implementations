@@ -1,5 +1,7 @@
 package L11_Car_Rental_System.Product;
 
-public class Status {
-    
+public enum Status {
+    AVAILABLE,
+    BOOKED,
+    IN_MAINTENANCE;
 }

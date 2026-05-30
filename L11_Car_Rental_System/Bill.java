@@ -12,6 +12,9 @@ public class Bill{
     }
 
     private double computeBillAmount(){
-        return 100.0;
+        if(reservation.reservationType == ReservationType.DAILY){
+            return reservation.vehicle.getDailyRentalCost();
+        }
+        return reservation.vehicle.getHourlyRentalCost();
     }
 }

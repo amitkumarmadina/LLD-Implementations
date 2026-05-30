@@ -29,4 +29,10 @@ public class Reservation {
         return reservationId;
     }
 
+
+    public void add(Reservation reservation) {
+         
+        
+        }
+
 }

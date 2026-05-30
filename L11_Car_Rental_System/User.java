@@ -2,7 +2,7 @@ package L11_Car_Rental_System;
 
 public class User {
  int userId;
- int userName;
+ String userName;
  int drivingLicence;
  
  public int getUserId(){
@@ -13,11 +13,11 @@ public class User {
     this.userId = userId;
  }
 
- public int getUserName(){
+ public String getUserName(){
     return userName;
  }
 
- public void setUserName(int userName){
+ public void setUserName(String userName){
     this.userName = userName;
  }
 

@@ -7,24 +7,44 @@ public class Store {
     int storeId;
     VehicleInventoryManagement inventoryManagement;
     Location storeLocation;
-    List<Reservation> Reservation = new ArrayList<>();
+    List<Reservation> reservations = new ArrayList<>();
 
     public List<Vehicle> getVehicles(VehicleType vehicleType){
-        return inventoryManagement.getVehicle();
+        if(inventoryManagement == null){
+            return new ArrayList<>();
+        }
+
+        List<Vehicle> filteredVehicles = new ArrayList<>();
+        for(Vehicle vehicle : inventoryManagement.getVehicles()){
+            if(vehicle.getVehicleType() == vehicleType && vehicle.getStatus() == Status.AVAILABLE){
+                filteredVehicles.add(vehicle);
+            }
+        }
+        return filteredVehicles;
     }
 
     public void setVehicles(List<Vehicle> vehicles){
         inventoryManagement = new VehicleInventoryManagement(vehicles);
     }
 
+    public void setStoreLocation(Location storeLocation){
+        this.storeLocation = storeLocation;
+    }
+
     public Reservation createReservation(Vehicle vehicle, User user){
         Reservation reservation = new Reservation();
-        reservation.createReserve(user,vehicle);
-        reservation.add(reservation);
+        reservation.createReservation(user,vehicle);
+        reservations.add(reservation);
         return reservation;
     }
 
     public boolean completeReservation(int reservationId){
-        return true;
+        for(Reservation reservation : reservations){
+            if(reservation.reservationId == reservationId){
+                reservation.completeReservation();
+                return true;
+            }
+        }
+        return false;
     }
 }
