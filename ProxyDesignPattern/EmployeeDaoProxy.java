@@ -3,6 +3,11 @@ package ProxyDesignPattern;
 public class EmployeeDaoProxy implements EmployeeDao{
     EmployeeDao employeeDaoObj;
 
+
+    EmployeeDaoProxy(){
+        employeeDaoObj = new EmployeeDaoImpl();
+    }
+    
      public void create(String client, EmployeeDo obj) throws Exception{
         if(client.equals("ADMIN")){
             employeeDaoObj.create(client, obj);
