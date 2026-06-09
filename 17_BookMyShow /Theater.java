@@ -3,28 +3,48 @@ import Enums.City;
 
 public class Theater {
     int theaterId;
-    String Address;
+    String address;
     City city;
     List<Screen> screens = new ArrayList<>();
     List<Show> shows = new ArrayList<>();
 
-    public int getTheaterId(){return theaterId;}
+    public int getTheaterId() {
+        return theaterId;
+    }
 
-    public void setTheaterId(int id){this.theaterId = id;}
+    public void setTheaterId(int id) {
+        this.theaterId = id;
+    }
 
-    public String getAddress(){return Address;}
+    public String getAddress() {
+        return address;
+    }
 
-    public void setAddress(String address){this.Address = address;}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-    public List<Screen> getScreen(){return screens;}
+    public List<Screen> getScreen() {
+        return screens;
+    }
 
-    public void setScreen(List<Screen> screen){this.screens = screen;}
-    
-    public List<Show> getShow(){return shows;}
+    public void setScreen(List<Screen> screen) {
+        this.screens = screen;
+    }
 
-    public void setShow(List<Show> show){this.shows = show;}
+    public List<Show> getShow() {
+        return shows;
+    }
 
-    public City getCity(){return city;}
-    public void setCity(City city){this.city = city;}
+    public void setShow(List<Show> show) {
+        this.shows = show;
+    }
 
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
+    }
 }

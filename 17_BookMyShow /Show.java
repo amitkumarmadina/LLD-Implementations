@@ -1,4 +1,3 @@
- 
 import java.util.*;
 
 public class Show {
@@ -6,45 +5,45 @@ public class Show {
     Movie movie;
     Screen screen;
     int showStartTime;
-    List<Integer> bookSeatId = new ArrayList<>();
+    List<Integer> bookedSeatIds = new ArrayList<>();
 
-    public int getShowId(){
+    public int getShowId() {
         return showId;
     }
 
-    public void setShowId(int id){
+    public void setShowId(int id) {
         this.showId = id;
-    } 
+    }
 
-    public Movie getMovie(){
+    public Movie getMovie() {
         return movie;
     }
 
-    public void setMovie(Movie movie){
+    public void setMovie(Movie movie) {
         this.movie = movie;
-    } 
+    }
 
-    public Screen getScreen(){
+    public Screen getScreen() {
         return screen;
     }
 
-    public void setScreen(Screen screen){
+    public void setScreen(Screen screen) {
         this.screen = screen;
     }
 
-    public void setShowStartingTime(int time){
+    public void setShowStartingTime(int time) {
         this.showStartTime = time;
     }
 
-    public int getShowStartTime(){
+    public int getShowStartTime() {
         return showStartTime;
     }
 
-    public List<Integer> getBookedSeatIds(){
-        return bookSeatId;
+    public List<Integer> getBookedSeatIds() {
+        return bookedSeatIds;
     }
 
-    public void seatBookedSeatIdx(List<Integer> bookedSeatIds){
-        this.bookSeatId = bookedSeatIds;
+    public void setBookedSeatIds(List<Integer> bookedSeatIds) {
+        this.bookedSeatIds = bookedSeatIds;
     }
 }

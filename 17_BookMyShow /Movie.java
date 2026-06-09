@@ -21,7 +21,7 @@ public class Movie {
         this.movieName = movieName;
     }
 
-    public int getMovieDuration(int movieDurationTime){
+    public int getMovieDuration(){
         return movieDurationTime;
     }
 

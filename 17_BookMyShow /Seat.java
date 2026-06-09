@@ -21,7 +21,7 @@ public class Seat {
         this.row = row;
     }
 
-    public SeatCategory getSeatCategory(SeatCategory seat){
+    public SeatCategory getSeatCategory(){
         return seatCategory;
     }
 
